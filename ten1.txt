@@ -1,0 +1,191 @@
+Scientific reasoning - hypotes->experiment->conclusion
+
+Technical knowledge - To know how a machine works
+Engineering knowledge - To be able to construct new machines
+Scientific knowledge - To understand the principles behind machines and their
+limitations
+
+Engineering - We find solutions to certain classes of problems
+Science - We find theorems and general laws that apply to a large class of
+situations
+
+# Science
+Generalization - abstraction, remove variables
+Verification & validation
+Methodology
+
+# Goals of Science
+- Science is a way to find absolute truths about nature
+- Science is a tool for handling nature in an efficient way
+
+Instrumentalism = Truth is not important, effectiveness is
+
+# HD-method
+Have hypothesis, want to prove false. Observations E_i such that H -> !E_i then
+E_i falsifies H.
+
+Add A paradigm to falsify H
+
+# Falisficationism
+A theory should be alble to falsify, theory T consequence K of T, if !K then T
+falsified and must be rejected. Only falsifiable theories is considered
+scientific.
+
+A falsified theory cannot predict anything.
+
+# Scientific method
+Normatively - how science should be practised.
+Descriptively - how science is done in practice.
+
+# Rosenthal experiment
+Test intelligence mice, group A told smarter, group A got better results.
+Expectations and influence matters -> double blind tests.
+
+# Intelligent design
+The world is to complex to be considered happening at random. Something else did
+the design.
+
+# The Monkey Trail
+Teaching the evolution
+
+# Scientific Theory
+Define: guided and explained by natural law, testable in empirical world,
+conclusions not final, falsifiable.
+
+# Correspondence Truth
+Evidence in reality.
+
+# Coherence Truth
+Consistent system of statements without contradictions. Prove using logic.
+
+# Intuitive Truth
+We cannot believe cannot be false.
+
+# Pragmatic Truth
+Can't prove false/true but believe it is true since good consequences for us
+
+# Logical positivism
+S = stmt
+if S can be proven true/false
+or observations can indicate true/false
+everything else is meaningless
+
+# Induction
+Make observations and find pattern
+If observations agree theory holds
+
+# Principle of uniformity in nature PUN
+Regularities in nature, meaningful to use induction
+
+# Goodman's paradox
+Grue = green if observed before to or blue and not observed before t. Are all
+emeralds green or grue? Should be green but induction says grue.
+
+# Occam's razor
+Simplicity
+
+Can't formalize common sense
+
+# Kuhn's paradigm
+background knowledge
+
+# Ad hoc hypothesis
+An hypothesis tailor-made to prove or disprove H
+
+# Bayesian probability
+The probability that A happens given that B has happened, P(A|B)
+Strengthen = P(H|E) > P(H) and viseversa
+
+# Probability:
+Axiomatic: A set of elementary events, every other element is a combination of these events
+Frequency: Probability is roughly frequency from repeated experiments
+Subjective: A probability someone believes it to be
+
+# DN model
+Hempel, nomological refers scientific law (L), fact P, situation S, L -> P,
+init. cond. I applies in S, Conclusion: P must be observed, I causes P
+
+# Causes
+Sufficient cause: A is a sufficient cause of B if A->B
+Necessary cause: A is a necessary cause of B if not A -> not B(B->A)
+
+# explanation
+Causal explanation: If something causes P, the it also explains P. (phy, bio,
+ss, math,cs) Functional explanation: P has some good function and this fact
+explains P. (ss)
+Explanation by purpose: There is some mind that has wanted P. (ss)
+Pragmatic explanation: The explanation is adapted to the type of answer the
+questioner wants. (ss)
+
+# Statistical correlations
+P(A&B)>P(A)P(B) A and B positively correlated
+Reichenbach P(A&)=P(A)P(B) no one is the cause of the other
+
+# Rationality
+In this context rationality means that each person acts in order to maximize his
+or hers utility.  This model is used in Game Theory.
+
+# Paradigm Shift
+A paradigm consists of terms, methods, norms and ways of viewing thing. It
+defines our way of understanding the world (or at least a part of it).
+
+Normal science is science as it is done within the paradigm.
+
+In revolutionary science we reject the old paradigm and replaces it with a new
+one.
+
+# Paradox
+PREMISE consisting of facts and established truths.
+ARGUMENT which is a logical derivation from the premise.
+CONCLUSION which seems to be false.
+In every paradox, either the premise is wrong, the argument is flawed or the
+conclusion is in fact true.
+
+-------- NEW --------
+
+\# Arisotle: descriptions of causes in nature: material, efficient, formal,
+final, Euclid: formal mathematics, axioms geometry, Brahe: planets move in
+ellipses.
+
+\# Attitude: Communalism: knowledge should be accessible for all people,
+Universalism: everyone should have the right to contribute, Disinterestedness:
+science should be objective and not ruled by special interests, Originality: the
+results should be new, Skepticism: scientists should be open to criticism
+
+\# Research: Exploratory: research on a new problem about which little is known,
+Testing-out: find limits of previous generalization, apply in new context,
+Problem-solving: start with existing problem find solution
+
+\# Scientific Filter: put solution in wider context, reference similar work,
+follow standards, prove
+
+\# Scientific method: Analysis, Hypothesis, Synthesis, Validation
+
+\# Vocabularies: deductive system the syntax of the language.
+
+\# Proof Methodology: learn by imitate existing proofs
+
+\# Counterexamples: Global: statement in theorem is false, Local: step in proof
+incorrect
+
+\# Paradoxes: Russel: Russell's paradox is based on examples like this: Consider
+a group of barbers who shave only those men who do not shave themselves. Suppose
+there is a barber in this collection who does not shave himself; then by the
+definition of the collection, he must shave himself. But no barber in the
+collection can shave himself. (If so, he would be a man who does shave men who
+shave themselves
+
+\# Gödel: a system must contain sentences which cannot be proved or disproved
+inside the system
+
+\# Tarski: snow is white iff snow is white
+
+\# Data: Primary: measurements or observations, Secondary: processed primary
+books and articles, Quantitative: raw numbers, Qualitative: GUI, opinions,
+stories
+
+\# Data analysis: Content: frequency, Mining: patterns in big data, Meta:
+analysis of analyzes
+
+TODO:
+\# Null Hypothesis:
