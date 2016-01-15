@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\bibliographystyle{unsrtnat}
+
+\title{Scientific comments on the Master's Thesis Extension of the Progressive Mesh Representation for 3D Triangular Meshes by Roland Mattsson. Reviewer:
+Hampus Fristedt.}
+\author{Hampus Fristedt}
+
+\begin{document}
+\maketitle
+
+\newpage
+
+\section{Summary}
+
+Polygon meshes are commonly used in computer graphics. The meshes are
+collections of geometric figues (commonly triangles) that form 3D models. These
+data structures are often large and can require great amounts of storage and
+processing power. An alternative to poylgon meshes are progressive meshes.
+Progressive meshes were developed at Microsoft Research by Hugues Hoppe in 1996
+and offer flexible level of detail and loss-less compression. 
+
+The representation is useful when bandwidth and processing power is limited. An
+analogy can be be made to digital pictures. For example, a user visits a website
+from their cellphone. The webserver detects that the user has poor bandwidth and
+serves a low-resolution image. Another user visits the same website from their
+desktop computer with a fiber connection. This user would instead be served a
+high-resolution image. In a similiar fashion, a progressive mesh can be served
+either in its "high-resolution" uncompressed form, or it can be served in a
+compressed "low-resolution" format with fewer polygons. Note that while a
+high-resolution image rarely can be restored from a low-resolution image, a
+progressive mesh can always be restored to its original "high-resolution" state.
+
+A movie is commonly shot and presented 24 frames each second. To achieve a
+smooth look, computer games require even more frames per second (FPS), 60 FPS
+being a common amount. Transmitting entire meshes every frame can be extremely
+demanding of both processors and bandwidth, even when using progressive meshes.
+Using articulated models is an efficient solution.
+
+An articulated model consists of an ordinary 3D-model, e.g. a mesh, and a set of
+parameters that control how the mesh appears. Instead of sending an entire new
+mesh every frame of an animation, the mesh is sent only once and new parameters
+are sent that represent the modifications of the model. This can drastically
+reduce the amount of data transmitted.
+
+Hoppe's description of progressive meshes did not describe how to combine his
+representation with articulated models. Roland Mattsson's master thesis
+describes how such a combination can be done. Mattson describes how animation of
+the progressive mesh can be done at any level of detail as well as a framework
+for controlling the level of detail of the mesh. Because both progressive meshes
+and articulated models are useful in situations where performance is limited,
+Mattsson spent extra effort in creating an efficient implementation, without
+sacrificing useful features.
+
+The articulated progressive meshes presented by Mattsson enable useful
+techniques. For example, different parts of a model can be represented at
+different levels of detail. A human model might be represented by a progressive
+mesh that is uncompressed above the shoulders to allow for an expressive face,
+but with a reduced number of polygons for the rest of the body. Objects far from
+the camera might also be served with fewer polygons than close objects.
+
+\newpage
+
+\section{Critical review}
+
+\subsection{Language and structure}
+
+The paper is overall very well written. The language is coherent, academic yet
+parseable. I did find one small spelling error ("correspons" on page 11).
+
+The included reading instructions state that the text follows a bottom-up
+approach, starting with an introduction to computer graphics and concluding with
+the author's own extension of progressive meshes and a summary. The bottom-up
+approach is applied well and the first sections of the report can be used by
+someone uninitiated as an introduction to the subject. The chosen structure of
+the report does however mean that the new, unique part of the work is placed at
+the very end of the report (starts at page 39 of 51).
+
+The abstract is brief, correct and informative. The reader is informed of the
+topic of the thesis immediately and the rest of the abstract is used describing
+the contents of the report. The title could have been more specific regarding
+what type of extension that is implemented, i.e. mention both progressive
+meshes and articulated models, instead of just the former.
+
+The background section is very informative and briefly describes most subjects
+within the scope of the work. The section could be used to give an uninformed
+reader a very good idea of what the work is about, why it exists, and whether it
+succeeded.
+
+The background section of the report is followed by a quite lengthy introduction
+to computer graphics that covers the theoretical basics of the subject. It
+describes applications, algebraic models, animation techniques and rendering. On
+pages 10 through 12, the author provides an almost needlessly extensive overview
+of meshes. The author does however defend the section by stating that it
+"constitutes a context for the progressive mesh representation". I question
+whether the section on parametric representations of objects is relevant to the
+report. Parametric representation is clearly an important part of computer
+graphics, but the work is about polygonal meshes that by definition are not
+parametric representations. The section about animation starts with an
+accessible introduction and continues with a section about different
+classification techniques for animation, and concludes by applying one of the
+classification techniques on different types of animation. The final part of the
+background is about rendering. Like the other parts, it is interesting but is of
+questionable relevance to the the work.
+
+Although I personally would prefer a more focused work with a shorter
+introduction, one of the criteria of a master's degree project is to
+"demonstrate knowledge of the chosen topic's disciplinary foundation and proven
+experience, insight into current research and development, as well as in-depth
+knowledge of methodology". Therefore, I cannot fault the author for including
+such a lengthy and accessible introduction.
+
+\subsection{Choice of topic}
+
+The author chose to base his work on the report Efficient Implementation of
+Progressive Meshes by \citet{hoppe1998}. This seems like a wise choice
+as Hoppe introduced the concept \citep{hoppe}. The chosen extension is a natural
+continuation of the research by Hoppe.
+
+\subsection{Methodology}
+
+
+\bibliography{references}
+
+\end{document}
