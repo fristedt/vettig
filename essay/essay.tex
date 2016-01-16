@@ -1,22 +1,22 @@
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{natbib}
+\usepackage{parskip}
 \bibliographystyle{unsrtnat}
 
 \title{Scientific comments on the Master's Thesis Extension of the Progressive Mesh Representation for 3D Triangular Meshes by Roland Mattsson. Reviewer:
 Hampus Fristedt.}
-\author{Hampus Fristedt}
 
 \begin{document}
+
 \maketitle
 
 \newpage
 
 \section{Summary}
 
-Polygon meshes are commonly used in computer graphics. The meshes are
-collections of geometric figues (commonly triangles) that form 3D models. These
-data structures are often large and can require great amounts of storage and
+Models in computer graphics are commonly made of triangle meshes. These data
+structures are often large and can require great amounts of storage and
 processing power. An alternative to poylgon meshes are progressive meshes.
 Progressive meshes were developed at Microsoft Research by Hugues Hoppe in 1996
 and offer flexible level of detail and loss-less compression. 
@@ -38,11 +38,13 @@ being a common amount. Transmitting entire meshes every frame can be extremely
 demanding of both processors and bandwidth, even when using progressive meshes.
 Using articulated models is an efficient solution.
 
-An articulated model consists of an ordinary 3D-model, e.g. a mesh, and a set of
-parameters that control how the mesh appears. Instead of sending an entire new
-mesh every frame of an animation, the mesh is sent only once and new parameters
-are sent that represent the modifications of the model. This can drastically
-reduce the amount of data transmitted.
+An articulated model consists of an ordinary 3D-model, e.g. a mesh, and
+instructions on how to display the mesh. Instead of sending an entire new mesh
+every frame of an animation, the mesh is sent only once and new instructions are
+sent that represent the modifications of the model. This can drastically reduce
+the amount of data transmitted. For example, instead of sending different meshes
+for every frame of a human waving, send a model of a human once and the
+different positions the hand should be in at different times.
 
 Hoppe's description of progressive meshes did not describe how to combine his
 representation with articulated models. Roland Mattsson's master thesis
@@ -50,8 +52,7 @@ describes how such a combination can be done. Mattson describes how animation of
 the progressive mesh can be done at any level of detail as well as a framework
 for controlling the level of detail of the mesh. Because both progressive meshes
 and articulated models are useful in situations where performance is limited,
-Mattsson spent extra effort in creating an efficient implementation, without
-sacrificing useful features.
+Mattsson spent extra effort in creating an efficient implementation.
 
 The articulated progressive meshes presented by Mattsson enable useful
 techniques. For example, different parts of a model can be represented at
@@ -108,18 +109,99 @@ Although I personally would prefer a more focused work with a shorter
 introduction, one of the criteria of a master's degree project is to
 "demonstrate knowledge of the chosen topic's disciplinary foundation and proven
 experience, insight into current research and development, as well as in-depth
-knowledge of methodology". Therefore, I cannot fault the author for including
-such a lengthy and accessible introduction.
+knowledge of methodology" \citep{hogfeldt}. Therefore, I cannot fault the author
+for including such a lengthy and accessible introduction.
 
-\subsection{Choice of topic}
+After the introduction to computer graphics comes a section of related work. The
+section contains information about related research in surface simplification,
+with a brief overview of different simplification algorithms and techniques,
+before finaly describing progressive meshes and representational animation (e.g.
+articulated objects). This section contains most knowledge required to
+understand the author's own results and could perhaps replace the entire
+introduction.
+
+The implementation section is about the practical part of the thesis:
+implementation details, the platform used and program structure. This section
+contains the "How"-part of a traditional IMRAD\footnote{introduction, methods,
+results, and discussion} method section.
+
+The section that contains the original research is titled Articulated
+Progressive Meshes. As the author promised in the background, it describes how
+progressive meshes can be combined with: 
+
+\begin{itemize}
+  \item Articulated objects
+  \item Rigid skinning
+  \item Soft skinning
+\end{itemize}
+
+The three different subsections are structured nicely. Each subsection starts
+with a short reminder of what defines the three different articulated
+structures, and each subsection is then split into a theory section, an
+implementation section and a section describing how the structure can be linked
+to progressive meshes.
+
+The final part of the report contains the summary and results. The section is
+like the rest of the report nicely written and contains what might be expected
+from such a section.
+
+\subsection{Research questions and references}
 
 The author chose to base his work on the report Efficient Implementation of
-Progressive Meshes by \citet{hoppe1998}. This seems like a wise choice
-as Hoppe introduced the concept \citep{hoppe}. The chosen extension is a natural
-continuation of the research by Hoppe.
+Progressive Meshes by \citet{hoppe1998}. This seems like a wise choice as Hoppe
+introduced the concept \citep{hoppe} and demonstrates the author's ability to
+pick and review a source. Hoppe is also a good example of a source of both high
+quality and relevance, as what source could be better than the inventor of the
+technology being studied? I found no unavailable references.
 
-\subsection{Methodology}
+The research question is stated clearly ("Our task is to extend the
+progressive mesh representation to support articulated models").
 
+As the thesis is about developing techniques that reduce stress on bandwidth and
+processors, I would argue that the chosen topic demonstrates well the ability to
+"... to develop and evaluate products, processes, systems, methods
+or technical solutions taking into consideration human conditions and needs and
+society's objectives for economically, socially and ecologically sustainable
+development" \citep{hogfeldtcivil}. Such techniques contribute by definition to
+sustainable development.
+
+\subsection{Scientific theory and methodology}
+
+The thesis is an example of exploratory research. It is about improving current
+techniques. However, the report lacks verification of the results; the results
+are never compared against existing techniques. Such a comparison would help the
+reader in evaluating the usefulness of the results. One could argue that such a
+comparison is outside the scope of the thesis, but without verification of
+results, it is difficult to apply the scientific method. The author does point
+out that testing the articulated progressive mesh framework is the "next step"
+and a viable topic for future work.
+
+Other than that, there are some signs of the scientific method. The results are
+reproducible given the extensive notes on implementation and theoretical
+details. There is also an implicit hypothesis, i.e. combining progessive meshes
+and articulated structures would yield useful results.
+
+Because a large part of the report is spent introducing the reader to the
+subject, the educational value of the work should be considered. While teaching
+is commonly not included in descriptions of the scientific method, most academic
+researchers spend time teaching. I would recommend the report to readers
+interested in computer graphics as it serves as a decent introduction.
+
+\subsection{Author's conclusions}
+
+The author concludes that "the early sections of the text explain all necessary
+parts in order to fully understand the resulting articulated progressive mesh
+representation" and that no superior surface simplification method exists. These
+conclusions are properly backed up by the introduction and related work
+sections. The research questions are answered but the author notes that some
+functionality was not implemented due to time constraints.
+
+\subsection{Reviewer's conclusions}
+
+The report is well written in clear academic english. The chosen topic is
+relevant and based on sources with high quality. The biggest problem with the
+report is the lack of scientific methodology, mainly the absence of verification
+of the results.
 
 \bibliography{references}
 
